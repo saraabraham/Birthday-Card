@@ -2,9 +2,12 @@ body {
     text-align: center;
     font-family: 'Happy Monkey', cursive;
     background: linear-gradient(#a2d2ff, pink);
-    color: #ffffff;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 
+/* Add subtle text shadows for better contrast */
 h1,
 h2,
 h3,
@@ -13,6 +16,7 @@ p {
     text-shadow: 0 0 1px black;
 }
 
+/* Profile image */
 #bff-img {
     width: 200px;
     height: 200px;
@@ -21,6 +25,7 @@ p {
     margin-bottom: 10px;
 }
 
+/* Birthday details */
 #bday-age {
     background: #EFB0C9;
     padding: 5px 10px;
@@ -41,6 +46,7 @@ p {
     align-items: center;
 }
 
+/* Gift sections */
 .gift-section {
     margin-top: 50px;
 }
@@ -65,8 +71,11 @@ p {
     border-radius: 10px;
     background-image: url("images/gift-cover.jpg");
     background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
 }
 
+/* Hover animations */
 #gift-img-happy:hover {
     background-image: url("images/happy.gif");
 }
@@ -87,24 +96,44 @@ p {
     background-image: url("images/cheers.gif");
 }
 
+/* Footer */
 #footer {
     font-style: italic;
-    width: 400px;
+    max-width: 400px;
     margin: 40px auto 20px;
+    padding: 0 10px;
+    line-height: 1.5;
 }
 
-a {
+/* Footer link — opens in new tab */
+#footer a {
     color: white;
+    text-decoration: underline;
 }
 
-/* 
-Add the footer paragraph according to the design. 
-Configure the anchor tag to open the link in a new tab.
-Forgotten how to do it? Google it! 
+#footer a:hover {
+    opacity: 0.8;
+}
 
-Link: 
-https://scrimba.com/learn/htmlandcss
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
 
-Text:
-Want to create your own Birthday GIFt site? Take this HTML & CSS course.
-*/
+    #bff-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gift-img {
+        width: 90%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    #footer {
+        width: 90%;
+        font-size: 14px;
+    }
+}
